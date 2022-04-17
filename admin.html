@@ -15,16 +15,16 @@
                         <h2 class="title">Sign in</h2>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Username"/>
+                            <input type="text" placeholder="Username" required/>
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password"/>
+                            <input type="password" placeholder="Password" required minlength="8" maxlength="17"/>
                         </div>
                         <input type="submit" class="btn solid" value="login">
                         <br>
                         <p class="password-reset">Forgot Password??</p>
-                        <a href="" class="redirect">Click Here to reset password</a>
+                        <a href="./redirect/reset.html" class="redirect">Click Here to reset password</a>
                         <br>
                     </form>
                 </div>
@@ -34,11 +34,11 @@
                         <h2 class="title">Sign up</h2>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="email@gmail.com"/>
+                            <input type="email" placeholder="email@gmail.com" required/>
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password"/>
+                            <input type="password" placeholder="Password" required minlength="8" maxlength="17"/>
                         </div>
                         <input type="submit" class="btn solid" value="Register">
                         <br>
