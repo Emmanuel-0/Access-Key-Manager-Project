@@ -20,7 +20,7 @@ input{
 }
 
 .forms-container {
-    position: absolute;
+    position: relative;
     width: 90%;
     height: 100%;
     top: 0;
