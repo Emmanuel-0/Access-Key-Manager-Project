@@ -9,7 +9,7 @@
     "build": "babel db.js --out-dir build",
     "dev-start": "babel-watch server.js"
   },
-  "author": "Olawale Aladeusi",
+  "author": "Stephen Aihoon",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.0.0",
