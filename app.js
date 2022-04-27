@@ -1,6 +1,10 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const knex = require('knex');
+let response = await fetch("http://localhost:5000/signup", {
+                method: "POST",
+                headers: {"content-type": "application/json"},
+                body: JSON.stringify(body)
+            });
 
-const app = express();
+
+const submitBtn = document.querySelector("btn solid");
+submitBtn.addEventListener('click', response);
+
