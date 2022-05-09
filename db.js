@@ -33,6 +33,7 @@ const createReflectionTable = () => {
   pool.query(queryText)
     .then((res) => {
       console.log(res);
+      console.log('its working perfectly')
       pool.end();
     })
     .catch((err) => {
@@ -58,6 +59,7 @@ const createUserTable = () => {
   pool.query(queryText)
     .then((res) => {
       console.log(res);
+      console.log('its working perfectly')
       pool.end();
     })
     .catch((err) => {
