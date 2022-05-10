@@ -1,13 +1,26 @@
 
-// db.js
-const { Pool } = require('pg');
-const dotenv = require('dotenv');
+// // db.js
+// const { Pool } = require('pg');
+// const dotenv = require('dotenv');
+
+import pg from "pg";
+const { Pool } = pg;
+import dotenv from 'dotenv';
 
 dotenv.config();
 
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL
+// });
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  user: 'postgres',
+  password: '19ephenPK.',
+  host: 'localhost',
+  port: 5432,
+  database: 'reflection_db'
 });
+
 
 pool.on('connect', () => {
   console.log('connected to the db');
@@ -119,7 +132,16 @@ pool.on('remove', () => {
 });
 
 
-module.exports = {
+// module.exports = {
+//   createReflectionTable,
+//   createUserTable,
+//   createAllTables,
+//   dropUserTable,
+//   dropReflectionTable,
+//   dropAllTables
+// };
+
+export {
   createReflectionTable,
   createUserTable,
   createAllTables,

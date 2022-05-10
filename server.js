@@ -6,21 +6,21 @@ import dotenv from 'dotenv';
 // const dotenve = require('dotenv');
 import 'babel-polyfill';
 // const { babelPolyfill } = require('babel-polyfill');
-import ReflectionWithDB from './src/usingDB/controller/Reflection.js';
+import ReflectionWithDB from './src/usingDB/controller/reflection.js';
 // const ReflectionWithDB  = require('./src/usingDB/controller/Reflection');
-import UserWithDb from './src/usingDB/controller/Users.js';
+import UserWithDb from './src/usingDB/controller/user.js';
 // const UserWithDb  = require('./src/usingDB/controller/Users');
 import Auth from './src/usingDB/middleware/Auth.js';
 // const Auth = require('./src/usingDB/middleware/Auth');
 
 dotenv.config();
-const Reflection = process.env.TYPE === 'db' ? ReflectionWithDB : null;
-const app = express()
+const Reflection = ReflectionWithDB;
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 app.get('/', (req, res) => {
-  return res.status(200).send({'message': 'YAY! Congratulations! Your first endpoint is working'});
+  return res.status(200).send({'message': '....endpoint is working'});
 });
 
 app.post('/api/v1/reflections', Auth.verifyToken, Reflection.create);
