@@ -4,8 +4,16 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL
+// });
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  user: 'postgres',
+  password: '19ephenPK.',
+  host: 'localhost',
+  port: 5432,
+  database: 'reflection_db'
 });
 
 export default {
